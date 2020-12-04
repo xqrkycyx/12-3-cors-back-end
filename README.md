@@ -1,4 +1,4 @@
-# Starter: CORS Front End Application
+# Starter: CORS Back End Application
 
 ## Installation
 
