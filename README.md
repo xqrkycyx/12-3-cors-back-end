@@ -11,4 +11,4 @@ Use `npm run start:dev` to run the application in development mode: server resta
 
 Set the `PORT` environment variable to the port this server should use.
 
-If `PORT` is not set, a default value of `5000` is used.
+If `PORT` is not set, a default value of `5555` is used.
