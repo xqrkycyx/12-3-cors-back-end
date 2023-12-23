@@ -3,15 +3,12 @@ const controller = require("./cors-enabled.controller");
 const methodNotAllowed = require("../errors/methodNotAllowed");
 const cors = require("cors");
 
-const corsDelete = cors({ methods: "DELETE" });
-const corsGet = cors({ methods: "GET" }); // non-standard -- normally just pass cors() directly in the get route below
-
 router
   .route("/:corsId")
-  .get(corsGet, controller.read)
+  .all(cors())
+  .get(controller.read)
   .put(controller.update)
-  .delete(corsDelete, controller.delete)
-  .options(corsDelete)
+  .delete(controller.delete)
   .all(methodNotAllowed);
 
 router
